@@ -12,7 +12,7 @@ def Required_line(p_1,angle,origin):
     a_1 = p_1[0][1] - m_0 * p_1[0][0] - c_0
     a_2 = p_1[1][1] - m_0 * p_1[1][0] - c_0
     c_1 = p_1[0][1] - m_1 * p_1[0][0]
-    if ((a_1 * a_2) > 0):
+    if ((a_1 * a_2) > 0):# The points of the lines segments are of same sign then it should not be included
         print("Line is excluded" )
     else:
         line_segment=[]
@@ -23,7 +23,7 @@ def Distance(m_1, c_1, p_1, m_0, c_0, origin):
     x_1 = (m_0-m_1)/(c_1-c_0)
     y_1 = m_0*(x_1)+c_0
 
-    distance= math.sqrt((origin[0]-x_1)**2 + (origin[1]-y_1)**2)
+    distance= math.sqrt((origin[0]-x_1)**2 + (origin[1]-y_1)**2) # Distance formula
     dist=[]
     dist.append(distance)
     return dist
